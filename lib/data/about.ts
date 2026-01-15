@@ -1,18 +1,11 @@
 export type AboutData = {
   paragraph: string[];
-  focusArea: string[];
 };
 
 export const aboutData: AboutData = {
   paragraph: [
-    "I am a full stack developer focused on building clean, maintainable, and scalable web applications. I care deeply about code structure, reusability, and long-term maintainability rather than quick hacks.",
-    "My approach to development is grounded in strong fundamentals — data structures, problem-solving patterns, and clear architectural thinking — which allows me to design systems that scale beyond simple demos.",
-    "I enjoy working across the stack, from crafting responsive user interfaces to designing reliable backend logic, and I continuously improve my understanding of how real-world products are built.",
-  ],
-  focusArea: [
-    "Full Stack Web Development (MERN, Next.js)",
-    "Clean UI Systems & Component Architecture",
-    "Data Structures & Algorithmic Thinking",
-    "Scalable and Maintainable Codebases",
+    "I am a Computer Science undergraduate with a strong interest in finance, which informs how I analyze and solve software problems. I focus on designing systems that address real-world use cases, balancing performance, scalability, and maintainability rather than optimizing for short-term results.",
+    "My technical background spans Java, C/C++, SQL, Python, and JavaScript, enabling me to reason about both low-level behavior and high-level system design.",
+    "I continuously refine my approach by studying real systems, and improving how I translate complex requirements into clear implementations.",
   ],
 };

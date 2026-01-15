@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Pushkar Banjare",
+  title: "Pushkar Banjare | Portfolio",
   description: "Portfolio website",
 };
 
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="font-sans antialiased">
-        <Navbar/>
+        <Navbar />
         {children}
       </body>
     </html>

@@ -1,15 +1,16 @@
-export type HeroData = {
-    name: string;
-    role: string;
-    tagline: string;
-    resumeUrl: string;
-    profileImage: string;
-}
+export type HomeData = {
+  name: string;
+  role: string;
+  tagline: string;
+  resumeUrl: string;
+  profileImage: string;
+};
 
-export const heroData: HeroData = {
-    name: "Pushkar Banjare",
-    role: "Full Stack Developer",
-    tagline: "I design and build scalable full-stack web applications with clean architecture and strong problem-solving foundations.",
-    resumeUrl: "/resume.pdf",
-    profileImage: "/profile.jpg",
-}
+export const homeData: HomeData = {
+  name: "Pushkar Banjare",
+  role: "Full Stack Developer",
+  tagline:
+    "I build software systems with a finance-aware, problem-first mindset, focusing on real world constraints and scalable design.",
+  resumeUrl: "/resume-vxx.pdf",
+  profileImage: "/picture.jpg",
+};

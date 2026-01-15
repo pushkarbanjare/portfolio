@@ -1,70 +1,110 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavItem } from "@/lib/data/nav";
-import { FiChevronDown } from "react-icons/fi";
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [activeId, setActiveId] = useState<string>("home");
 
   function handleScroll(id: string) {
     const el = document.getElementById(id);
-    if(!el) return;
+    if (!el) return;
 
     el.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
-
-    setOpen(false);
   }
 
+  // section track
+  useEffect(() => {
+    const sections = NavItem.map((item) =>
+      document.getElementById(item.id)
+    ).filter(Boolean) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: "-40% 0px -50% 0px",
+        threshold: 0,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <header className="fixed top-0 z-50 w-full">
-      {/* DESKTOP NAVBAR */}
-      <nav className="hidden md:flex mx-auto max-w-6xl items-center justify-center px-6 py-4 backdrop-blur-md bg-background/60">
-        <ul className="flex items-center gap-6">
-          {NavItem.map((item) => (
-            <li key={item.id}>
-              <button
-                onClick={()=>handleScroll(item.id)}
-                className="text-md text-foreground/80 transition-colors hover:text-foreground"
-              >
-                {item.label}
-              </button>
-            </li>
-          ))}
+    <header className="fixed top-4 z-50 w-full pointer-events-none">
+      {/* desktop navbar */}
+      <nav className="hidden md:flex pointer-events-auto mx-auto max-w-fit items-center justify-center rounded-full border border-white/10 bg-background/60 backdrop-blur-xl px-4 py-2 shadow-lg">
+        <ul className="flex items-center gap-1">
+          {NavItem.map((item) => {
+            const Icon = item.icon;
+            const isActive = activeId === item.id;
+
+            return (
+              <li key={item.id}>
+                <button
+                  onClick={() => handleScroll(item.id)}
+                  className={`group flex items-center gap-2 rounded-full px-4 py-2 text-sm transition ${
+                    isActive
+                      ? "text-foreground bg-white/10"
+                      : "text-foreground/70 hover:text-foreground hover:bg-white/5"
+                  }`}
+                >
+                  <Icon
+                    size={16}
+                    className={`relative -top-px transition ${
+                      isActive
+                        ? "drop-shadow-[0_0_6px_rgba(255,255,255,0.6)]"
+                        : "group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]"
+                    }`}
+                  />
+                  <span>{item.label}</span>
+                </button>
+              </li>
+            );
+          })}
         </ul>
       </nav>
 
-      {/* MOBILE MENU BUTTON */}
-      <div className="md:hidden flex justify-center items-center max-w-6xl px-6 py-4 backdrop-blur-md bg-background/60">
-        <button
-          onClick={() => setOpen((p) => !p)}
-          className="flex items-center text-md text-foreground/80 hover:text-foreground gap-1"
-        >
-          Menu 
-          <FiChevronDown className={`transition-transform duration-200 ${open ? "rotate-180" : "rotate-0"}`} size={23}/>
-        </button>
-      </div>
+      {/* mobile navbar */}
+      <nav className="md:hidden pointer-events-auto mx-auto max-w-fit rounded-full border border-white/10 bg-background/70 backdrop-blur-xl px-4 py-2 shadow-lg">
+        <ul className="flex items-center gap-6">
+          {NavItem.map((item) => {
+            const Icon = item.icon;
+            const isActive = activeId === item.id;
 
-      {/* MOBILE DROPDOWN */}
-      {open && (
-        <div className="md:hidden backdrop-blur-md bg-background/90 border-b border-white/10">
-          <ul className="flex flex-col items-center gap-6 py-6">
-            {NavItem.map((item) => (
+            return (
               <li key={item.id}>
                 <button
-                  onClick={()=> handleScroll(item.id)}
-                  className="text-sm text-foreground transition-colors hover:text-foreground/80"
+                  onClick={() => handleScroll(item.id)}
+                  className="flex items-center justify-center p-2"
                 >
-                  {item.label}
+                  <Icon
+                    size={20}
+                    className={`
+                transition-all
+                ${
+                  isActive
+                    ? "text-foreground drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]"
+                    : "text-foreground/50"
+                }
+              `}
+                  />
                 </button>
               </li>
-            ))}
-          </ul>
-        </div>
-      )}
+            );
+          })}
+        </ul>
+      </nav>
     </header>
   );
 }
