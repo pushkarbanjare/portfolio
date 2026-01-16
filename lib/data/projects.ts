@@ -29,7 +29,7 @@ export const projects: Project[] = [
       "A secure, full-stack authentication system built with the MERN stack, offering seamless user login and authorization.",
     techStack: ["React", "Javascript", "Express"],
     githubUrl: "https://github.com/pushkarbanjare/authify",
-    liveUrl: "https://authify-srvq.onrender.com/",
+    liveUrl: "",
   },
   {
     title: "Contact Manager",

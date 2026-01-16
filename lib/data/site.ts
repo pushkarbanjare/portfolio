@@ -11,6 +11,6 @@ export const homeData: HomeData = {
   role: "Full Stack Developer",
   tagline:
     "I build software systems with a finance-aware, problem-first mindset, focusing on real world constraints and scalable design.",
-  resumeUrl: "/resume-vxx.pdf",
+  resumeUrl: "/Resume.pdf",
   profileImage: "/picture.jpg",
 };
