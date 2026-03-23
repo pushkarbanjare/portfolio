@@ -32,9 +32,9 @@ export default function Home() {
               <a
                 href={homeData.resumeUrl}
                 target="_blank"
-                className="inline-flex items-center gap-2 rounded-xl border-2 border-white/40 px-4 py-2 text-sm transition hover:bg-foreground hover:text-background"
+                className="group inline-flex items-center gap-2 rounded-lg border-2 border-white/20 px-5 py-2 text-sm transition hover:bg-foreground hover:text-background active:bg-foreground active:text-background"
               >
-                Resume <FiArrowRight size={15} />
+                Resume <FiArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1 group-active:translate-x-1"/>
               </a>
             </div>
           </div>

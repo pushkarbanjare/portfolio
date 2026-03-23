@@ -12,8 +12,8 @@ export const experiences: Experience[] = [
     company: "LTIMindtree",
     duration: "May 2025 - August 2025",
     description: [
-      "Worked as a SAP Security consultant.",
-      "Got hands-on experience in  various SAP modules.",
+      "Developed a professional foundation in enterprise workflows and corporate communication within the SAP consulting environment.",
+      "Gained hands-on exposure to SAP Security and various business modules, providing a high-level understanding of the ecosystem",
     ],
     techStack: ["SAP GRC", "SAP HRM", "SAP BI/BW"],
   },

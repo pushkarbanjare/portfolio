@@ -47,7 +47,7 @@ export default function Contact() {
             </h2>
 
             {/* main content */}
-            <div className="grid gap-10 md:grid-cols-2 mt-10">
+            <div className="grid gap-10 md:grid-cols-2 ">
               {/* contact form */}
               <form action={action} className="flex flex-col gap-4 w-full">
                 <input
@@ -56,26 +56,26 @@ export default function Contact() {
                   required
                   disabled={status === "loading"}
                   placeholder="Your email"
-                  className="rounded-md border border-white/20 bg-background/40 px-5 py-2 text-sm"
+                  className="rounded-lg border border-white/20 bg-background/40 px-5 py-2 text-sm"
                 />
 
                 <textarea
                   name="message"
-                  rows={5}
+                  rows={10}
                   required
                   disabled={status === "loading"}
                   placeholder="Your message"
-                  className="resize-none rounded-md border border-white/20 bg-background/40 px-5 py-2 text-sm"
+                  className="resize-none rounded-lg border border-white/20 bg-background/40 px-5 py-2 text-sm"
                 />
 
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="group inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/20 px-4 py-2 text-sm transition hover:bg-foreground hover:text-background disabled:opacity-60"
+                  className="group inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white/20 px-4 py-2 text-sm transition hover:bg-foreground hover:text-background disabled:opacity-60"
                 >
                   {status === "loading" ? "Sending..." : "Send Message"}
                   {status !== "loading" && (
-                    <FiSend className="transition-transform group-hover:translate-x-1" />
+                    <FiSend className="transition-transform group-hover:translate-x-1 group-hover:rotate-45" />
                   )}
                 </button>
 
@@ -92,13 +92,13 @@ export default function Contact() {
               </form>
 
               {/* socials + context */}
-              <div className="flex flex-col justify-evenly gap-10 text-center">
-                <p className="text-sm text-foreground/80 leading-relaxed">
+              <div className="flex flex-col justify-center text-center py-5 px-2">
+                <p className="text-sm text-foreground/80 leading-relaxed px-5">
                   Feel free to reach out for collaborations, opportunities, or
                   just to have a conversation about technology product thinking.
                 </p>
 
-                <div className="flex justify-center items-center gap-5">
+                <div className="flex justify-center items-center gap-5 py-10">
                   <a
                     href="https://leetcode.com/u/pushkarbanjare/"
                     target="_blank"
@@ -149,7 +149,7 @@ export default function Contact() {
       </div>
       {/* footer line */}
       <div className="pt-4 pb-4 border-t border-white/20 text-center text-xs text-foreground/60">
-        © {new Date().getFullYear()} Pushkar Banjare. All rights reserved.
+        © 2025 Pushkar Banjare. All rights reserved.
       </div>
     </section>
   );

@@ -26,14 +26,14 @@ export default function Experience() {
                   <h3 className="font-heading text-xl font-medium">
                     {exp.company}
                   </h3>
-                  <span className="text-sm text-foreground/60">
+                  <span className="text-sm text-foreground/80">
                     {exp.duration}
                   </span>
                 </div>
 
                 {/* role */}
                 <div className="flex items-center gap-2 text-md text-foreground/80">
-                  <BiBriefcase size={16} className="relative bottom-[1.5px]" />
+                  <BiBriefcase size={16} className="relative" />
                   <span>{exp.role}</span>
                 </div>
 
@@ -49,7 +49,7 @@ export default function Experience() {
                   {exp.techStack.map((tech) => (
                     <li
                       key={tech}
-                      className="rounded-full border border-white/10 px-3 py-1 text-xs text-foreground/80"
+                      className="rounded-full border border-white/20 px-3 py-1 text-xs text-foreground/80"
                     >
                       {tech}
                     </li>

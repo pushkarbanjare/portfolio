@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Pushkar Banjare",
+  title: "Pushkar Banjare | Portfolio",
   description: "Portfolio website of Pushkar Banjare",
   verification: {
     google: "L7f77gXLwAnIrbX_crXf-lGPt0v-GXCc6ysUCqUT9HI",

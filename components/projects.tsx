@@ -48,9 +48,9 @@ export default function Projects() {
                     <a
                       href={project.githubUrl}
                       target="_blank"
-                      className="inline-flex items-center gap-2 rounded-lg border-2 border-white/40 px-3 py-2 text-xs text-foreground transition hover:bg-foreground hover:text-background"
+                      className="inline-flex items-center gap-2 rounded-lg border-2 border-white/50 px-3 py-2 text-xs text-foreground transition hover:bg-foreground hover:text-background"
                     >
-                      <FiGithub size={16} />
+                      <FiGithub size={15} />
                       Github
                     </a>
                   )}
@@ -59,9 +59,9 @@ export default function Projects() {
                     <a
                       href={project.liveUrl}
                       target="_blank"
-                      className="inline-flex items-center gap-2 rounded-lg border-2 border-white/40 px-3 py-2 text-xs text-foreground transition hover:bg-foreground hover:text-background"
+                      className="inline-flex items-center gap-2 rounded-lg border-2 border-white/50 px-3 py-2 text-xs text-foreground transition hover:bg-foreground hover:text-background"
                     >
-                      <FiGlobe size={16} />
+                      <FiGlobe size={15} />
                       Live
                     </a>
                   )}
