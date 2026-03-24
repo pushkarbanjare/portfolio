@@ -1,6 +1,6 @@
 import { homeData } from "@/lib/data/site";
 import Image from "next/image";
-import { FiArrowRight } from "react-icons/fi";
+import { FiArrowRight, FiDownload } from "react-icons/fi";
 
 export default function Home() {
   return (
@@ -27,14 +27,29 @@ export default function Home() {
               {homeData.tagline}
             </div>
 
-            {/* resume btn */}
-            <div className="mt-6 flex justify-center md:justify-start">
+            {/* resume buttons */}
+            <div className="mt-6 flex justify-center md:justify-start gap-3">
+              {/* View Resume */}
               <a
                 href={homeData.resumeUrl}
                 target="_blank"
-                className="group inline-flex items-center gap-2 rounded-lg border-2 border-white/20 px-5 py-2 text-sm transition hover:bg-foreground hover:text-background active:bg-foreground active:text-background"
+                className="group inline-flex items-center gap-2 rounded-lg border-2 border-white/20 px-5 py-2 text-sm transition hover:bg-foreground hover:text-background"
               >
-                Resume <FiArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1 group-active:translate-x-1"/>
+                View Resume
+                <FiArrowRight
+                  size={15}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </a>
+
+              {/* Download Resume */}
+              <a
+                href={homeData.resumeUrl}
+                download="Pushkar_Resume.pdf"
+                className="inline-flex items-center gap-2 rounded-lg border-2 border-white/20 px-5 py-2 text-sm transition hover:bg-foreground hover:text-background"
+              >
+                Download
+                <FiDownload size={15} />
               </a>
             </div>
           </div>

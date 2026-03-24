@@ -4,8 +4,9 @@ export type AboutData = {
 
 export const aboutData: AboutData = {
   paragraph: [
-    "I am a Computer Science undergraduate with a strong interest in finance, which informs how I analyze and solve software problems. I focus on designing systems that address real-world use cases, balancing performance, scalability, and maintainability rather than optimizing for short-term results.",
-    "My technical background spans Java, C/C++, SQL, Python, and JavaScript, enabling me to reason about both low-level behavior and high-level system design.",
-    "I continuously refine my approach by studying real systems, and improving how I translate complex requirements into clear implementations.",
+    "Architect full-stack applications with a focus on robust backend systems, scalable API design, and secure request handling through modular, production-ready code.",
+    "Interested in solving real-world problems, especially in areas like finance, by designing systems that are practical, reliable, and usable in real scenarios.",
+    "Approach problems by breaking them into clear data flows and system components, ensuring structured implementation rather than jumping directly into code.",
+    "Manage end-to-end deployments, resolving production-level concerns including API reliability, latency optimization, and secure cross-service communication.",
   ],
 };

@@ -14,16 +14,16 @@ export default function About() {
           </h2>
 
           {/* paragraph */}
-          <div className="mt-6 space-y-6 sm:mx-10">
+          <ul className="mt-8 max-w-3xl mx-auto space-y-5">
             {aboutData.paragraph.map((text, index) => (
-              <p
-                key={index}
-                className="text-sm text-foreground/70 leading-loose text-center"
-              >
-                {text}
-              </p>
+              <li key={index} className="flex items-start gap-3">
+                <span className="mt-2 h-1 w-2 rounded-full bg-foreground/60"></span>
+                <p className="text-sm text-foreground/80 leading-relaxed">
+                  {text}
+                </p>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>
