@@ -19,7 +19,7 @@ export const projects: Project[] = [
     description: "An AI-powered recruitment tool that parses resumes against job descriptions to provide skill-gap analysis and match scoring. It utilizes a modular FastAPI backend and Nextjs frontend to transform raw PDF data into actionable insights for candidates.",
     techStack: ["Nextjs", "Typescript", "FastAPI", "Jupyter Notebook"],
     githubUrl: "https://github.com/pushkarbanjare/hiremind",
-    liveUrl: "https://hiremind-tool.vercel.app/",
+    liveUrl: "https://hiremind-frontend-voin.onrender.com/",
   },
   {
     title: "Taskstack",
