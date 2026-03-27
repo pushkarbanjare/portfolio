@@ -1,4 +1,4 @@
-## Portfolio Website
+## Portfolio
 
 This is my personal portfolio website built using **Next.js (App Router)** with a strong focus on clean architecture, maintainable UI, and a config-driven approach.
 
