@@ -8,23 +8,23 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Finaura",
-    description: "A fullstack expense intelligence platform featuring automated categorization, and interactive financial analytics. It transforms raw transaction data into visual insights through a custom dashboard built with Nextjs, MongoDB, and Recharts.",
-    techStack: ["Nextjs", "Typescript"],
+    title: "FinAura",
+    description: "A fullstack expense tracking platform with hybrid auto-categorization (rules + LLM fallback) and interactive analytics, converting raw transaction data into structured financial insights via a custom dashboard built with Next.js and MongoDB.",
+    techStack: ["Nextjs", "Typescript", "MongoDB", "Gemini LLM"],
     githubUrl: "https://github.com/pushkarbanjare/finaura",
     liveUrl: "https://finaura-app.vercel.app/",
   },
   {
-    title: "Hiremind",
-    description: "An AI-powered recruitment tool that parses resumes against job descriptions to provide skill-gap analysis and match scoring. It utilizes a modular FastAPI backend and Nextjs frontend to transform raw PDF data into actionable insights for candidates.",
-    techStack: ["Nextjs", "Typescript", "FastAPI", "Jupyter Notebook"],
+    title: "HireMind",
+    description: "A fullstack resume-job matching platform that parses PDF resumes and compares them with job descriptions to generate match scores and identify skill gaps, built using a modular FastAPI backend and Next.js frontend.",
+    techStack: ["Nextjs", "Typescript", "FastAPI", "MongoDB"],
     githubUrl: "https://github.com/pushkarbanjare/hiremind",
-    liveUrl: "https://hiremind-frontend-voin.onrender.com/",
+    liveUrl: "https://hiremind-web.vercel.app/",
   },
   {
     title: "Taskstack",
     description: "A streamlined fullstack task manager built to explore the integration of a FastAPI backend with a Nextjs and PostgreSQL. It features a persistent, unified database and a clean dark UI designed for efficient CRUD operations.",
-    techStack: ["Nextjs", "Typescript", "PostgreSQL", "FastAPI"],
+    techStack: ["Nextjs", "Typescript", "FastAPI", "PostgreSQL"],
     githubUrl: "https://github.com/pushkarbanjare/taskstack",
     liveUrl: "",
   },

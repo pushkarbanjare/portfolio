@@ -8,12 +8,12 @@ export default function About() {
     >
       <div className="w-full max-w-5xl mx-auto px-5">
         <div className="flex flex-col gap-6">
-          {/* heading */}
+          {/* ========== heading ========== */}
           <h2 className="font-heading text-3xl font-semibold text-center">
             About
           </h2>
 
-          {/* paragraph */}
+          {/* ========== paragraph ========== */}
           <ul className="mt-8 max-w-3xl mx-auto space-y-5">
             {aboutData.paragraph.map((text, index) => (
               <li key={index} className="flex items-start gap-3">

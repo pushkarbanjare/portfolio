@@ -9,7 +9,8 @@ export type HomeData = {
 export const homeData: HomeData = {
   name: "Pushkar Banjare",
   role: "Full Stack Developer",
-  tagline: "I am a Full-Stack Engineer who builds resilient, end-to-end software systems. From architecting scalable backends to crafting intuitive user interfaces, I focus on solving real-world problems with technical precision and a performance-first mindset.",
-  resumeUrl: "/Resume.pdf",
+  tagline:
+    "I build end-to-end software systems with a strong focus on backend development, API design, and clean system architecture. From designing scalable backends to creating intuitive user interfaces, I aim to solve real-world problems with structured thinking and reliable implementation.",
+  resumeUrl: "https://drive.google.com/file/d/18mC8JiYoxXTfPRgSu94YalnGLXEddvl1/view",
   profileImage: "/picture.jpg",
 };

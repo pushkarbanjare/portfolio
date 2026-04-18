@@ -16,10 +16,10 @@ export default function Navbar() {
     });
   }
 
-  // section track
+  // ========== section track ==========
   useEffect(() => {
     const sections = NavItem.map((item) =>
-      document.getElementById(item.id)
+      document.getElementById(item.id),
     ).filter(Boolean) as HTMLElement[];
 
     const observer = new IntersectionObserver(
@@ -33,7 +33,7 @@ export default function Navbar() {
       {
         rootMargin: "-40% 0px -50% 0px",
         threshold: 0,
-      }
+      },
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -42,7 +42,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-4 z-50 w-full pointer-events-none">
-      {/* desktop navbar */}
+      {/* ========== desktop navbar ========== */}
       <nav className="hidden md:flex pointer-events-auto mx-auto max-w-fit items-center justify-center rounded-full border border-white/10 bg-background/60 backdrop-blur-xl px-4 py-2 shadow-lg">
         <ul className="flex items-center gap-1">
           {NavItem.map((item) => {
@@ -75,7 +75,7 @@ export default function Navbar() {
         </ul>
       </nav>
 
-      {/* mobile navbar */}
+      {/* ========== mobile navbar ========== */}
       <nav className="md:hidden pointer-events-auto mx-auto max-w-fit rounded-full border border-white/10 bg-background/70 backdrop-blur-xl px-4 py-2 shadow-lg">
         <ul className="flex items-center gap-6">
           {NavItem.map((item) => {

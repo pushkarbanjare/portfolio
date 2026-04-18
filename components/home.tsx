@@ -10,29 +10,28 @@ export default function Home() {
     >
       <div className="w-full max-w-5xl p-5">
         <div className="flex flex-col-reverse md:flex-row items-center gap-4 md:gap-10 transition-[gap] duration-300">
-          {/* matter */}
           <div className="w-full md:w-4/6 text-center md:text-left">
-            {/* name */}
+            {/* ========== name ========== */}
             <h1 className="mt-6 md:mt-0 font-heading text-[clamp(2.5rem,5vw,4rem)] font-bold transition-[font-size,line-height] duration-300 ease-out">
               {homeData.name}
             </h1>
 
-            {/* role */}
+            {/* ========== role ========== */}
             <div className="mt-3 text-xl text-foreground/90 font-semibold">
               {homeData.role}
             </div>
 
-            {/* tagline */}
+            {/* ========== tagline ========== */}
             <div className="mt-6 max-w-lg text-sm text-foreground/80 leading-loose mx-auto md:mx-0 transition-all duration-300 ease-out">
               {homeData.tagline}
             </div>
 
-            {/* resume buttons */}
+            {/* ========== resume btn ========== */}
             <div className="mt-6 flex justify-center md:justify-start gap-3">
-              {/* View Resume */}
               <a
                 href={homeData.resumeUrl}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-lg border-2 border-white/20 px-5 py-2 text-sm transition hover:bg-foreground hover:text-background"
               >
                 View Resume
@@ -41,20 +40,10 @@ export default function Home() {
                   className="transition-transform duration-300 group-hover:translate-x-1"
                 />
               </a>
-
-              {/* Download Resume */}
-              <a
-                href={homeData.resumeUrl}
-                download="Pushkar_Resume.pdf"
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-white/20 px-5 py-2 text-sm transition hover:bg-foreground hover:text-background"
-              >
-                Download
-                <FiDownload size={15} />
-              </a>
             </div>
           </div>
 
-          {/* picture */}
+          {/* ========== picture ========== */}
           <div className="w-full md:w-2/6 flex justify-center">
             <div className="relative h-60 w-60 overflow-hidden rounded-xl border border-white/20">
               <Image
