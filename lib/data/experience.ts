@@ -8,14 +8,22 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
+    role: "Software Engineer",
+    company: "Freelance",
+    duration: "Sept 2025 - Present",
+    description: [
+      "Built websites for local retailer who wants to expand their business across internet and contributing in the growth of the business."
+    ],
+    techStack: ["Software Development"],
+  },
+  {
     role: "Graduate Engineer Trainee",
     company: "LTIMindtree",
-    duration: "May 2025 - August 2025",
+    duration: "May 2025 - Aug 2025",
     description: [
-      "Completed specialized training in SAP GRC and S/4HANA, gaining knowledge of security, access control, and compliance workflows.",
+      "Completed specialized training in SAP modules, gaining knowledge of security, access control, and compliance workflows.",
       "Gained exposure to SAP Security and core business modules, developing a high-level understanding of enterprise system architecture.",
-      "Participated in professional communication and corporate leadership workshops, improving cross-functional collaboration.",
     ],
-    techStack: ["SAP GRC", "SAP S/4HANA"],
+    techStack: ["SAP GRC", "SAP S/4 HANA"],
   },
 ];

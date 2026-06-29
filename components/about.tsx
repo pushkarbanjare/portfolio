@@ -17,7 +17,7 @@ export default function About() {
           <ul className="mt-8 max-w-3xl mx-auto space-y-5">
             {aboutData.paragraph.map((text, index) => (
               <li key={index} className="flex items-start gap-3">
-                <span className="mt-2 h-1 w-2 rounded-full bg-foreground/60"></span>
+                <span className="mt-2 h-1 w-1 rounded-full bg-foreground/60"></span>
                 <p className="text-sm text-foreground/80 leading-relaxed">
                   {text}
                 </p>

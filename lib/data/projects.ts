@@ -9,17 +9,17 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "FinAura",
-    description: "A fullstack expense tracking platform with hybrid auto-categorization (rules + LLM fallback) and interactive analytics, converting raw transaction data into structured financial insights via a custom dashboard built with Next.js and MongoDB.",
-    techStack: ["Nextjs", "Typescript", "MongoDB", "Gemini LLM"],
+    description: "Fullstack personal finance platform featuring asynchronous AI-powered expense categorization, Redis-backed microservices, and real-time financial insights.",
+    techStack: ["Spring Boot", "MongoDB", "Redis", "Next.js", "Typescript"],
     githubUrl: "https://github.com/pushkarbanjare/finaura",
     liveUrl: "https://finaura-app.vercel.app/",
   },
   {
     title: "HireMind",
-    description: "A fullstack resume-job matching platform that parses PDF resumes and compares them with job descriptions to generate match scores and identify skill gaps, built using a modular FastAPI backend and Next.js frontend.",
-    techStack: ["Nextjs", "Typescript", "FastAPI", "MongoDB"],
+    description: "Fullstack AI resume analysis platform featuring semantic resume-to-JD matching, skill-gap detection, and multi-LLM resume optimization.",
+    techStack: ["FastAPI", "NLP", "MongoDB", "Typescript", "Next.js"],
     githubUrl: "https://github.com/pushkarbanjare/hiremind",
-    liveUrl: "https://hiremind-web.vercel.app/",
+    liveUrl: "",
   },
   {
     title: "Taskstack",
